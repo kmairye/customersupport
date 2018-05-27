@@ -1,0 +1,253 @@
+:root {
+    /*font colors*/
+    --baseFont: #333;
+    /*backgrounds*/
+    --darkBlue: #3c4869;
+    --supBG: #eee;
+    --numberBG: #b3c5e6;
+    --messageBG: #eee;
+    --impHigh: red;
+    --impMod: yellow;
+    --impLow: green;
+}
+html {
+    font-size: 1em;
+}
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    color: var(--baseFont);
+    margin: 0 auto;
+    max-width: 1024px;
+}
+/*header*/
+header {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+header p {
+    margin: 0;
+    font-style: italic;
+}
+#color-guide {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
+}
+.guide {
+    height: 2vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 1px 1px 1px var(--baseFont);
+    padding: 5px;
+    cursor: pointer;
+    
+}
+#high-guide {
+    background-color: var(--impHigh);
+}
+#mod-guide {
+    background-color: var(--impMod);
+}
+#low-guide {
+    background-color: var(--impLow);
+}
+#all-guide {
+    background-color: var(--supBG);
+}
+/*main*/
+
+#main-con {
+    grid-column: 1/5;
+    display: grid;
+    grid-gap: 14px;
+}
+
+
+
+
+/*information about how many requests there are*/
+ /* #number-con {
+    grid-column: 1/3;
+    display: grid;
+    position: relative;
+}
+#number-total {
+    position: absolute;
+    top: 4vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: var(--numberBG);
+    z-index: 3;
+    cursor: pointer;
+    padding-left: 10px;
+
+}
+#number-add {
+    position: absolute;
+    top: 4vw;
+    display: grid;
+    width: 30%;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: all 0.6s ease;
+    background-color: var(--numberBG);
+}
+#hide-number-add {
+    position: absolute;
+    top: 4vw;
+    height: 3.6vw;
+    width: 30%;
+    background-color: var(--numberBG);
+    z-index: 2;
+    
+}
+.circle-num-con {
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+#circle-high,
+#circle-mod,
+#circle-low {
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+}
+#circle-high {
+    background-color: var(--impHigh);
+}
+#circle-mod {
+    background-color: var(--impMod);
+}
+#circle-low {
+    background-color: var(--impLow);
+} */
+ 
+
+
+
+
+/* the clone army */
+#sup-con {
+    background-color: var(--supBG);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    position: relative;
+    transition: all 0.6s ease;
+    box-shadow: 1px 1px 2px var(--baseFont);
+}
+#sup-name, #sup-date, #sup-done, #sup-importance {
+    transition: all 0.3s ease;
+}
+#sup-name {
+    padding-left: 10px;
+}
+#sup-date {
+    font-size: 0.6rem;
+}
+#sup-subj-con {
+    grid-column: 3/5;
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#sup-done {
+    cursor: pointer;
+}
+#sup-importance {
+    height: 100%;
+    width: 3vw;
+    position: absolute;
+    right: 0;
+}
+
+/*modal*/
+#modal {
+    z-index: 4;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: var(--messageBG);
+    box-shadow: 2px 10px 20px var(--baseFont);
+
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#mod-close {
+    grid-column: 5/6;
+    display: grid;
+    justify-content: center;
+    margin-top: 2vw;
+    cursor: pointer;
+    font-size: 2rem;
+}
+#mod-txt {
+    grid-column: 2/5;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 4rem;
+}
+    .mod-from-con, .mod-date-con, .mod-subj-con  {
+        display: grid;
+        grid-template-columns: 14% 1fr;
+        align-items: center;
+        height: 36px;
+    }
+    #mod-from, #mod-date, #mod-subj {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    #mod-subj {
+        font-weight: 800;
+    }
+    .additional-text {
+        font-size: 0.8rem;
+    }
+/*buttons*/
+.btn-con {
+    display: grid;
+    justify-content: center;
+
+}
+.done-con {
+    grid-column: 4/5;
+    width: 8vw;
+}
+.save-con {
+    grid-column: 2/3;
+    width: 12vw;
+}
+button {
+    color: var(--numberBG);
+    text-transform: uppercase;
+    background-color: var(--darkBlue);
+    border: none;
+    height: 5vw;
+    text-align: center;
+    margin: 2vw;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/*footer*/
+footer {
+    position: sticky;
+    bottom: 0;
+    height: 2vw;
+}
